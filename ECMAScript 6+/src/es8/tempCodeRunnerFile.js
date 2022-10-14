@@ -1,3 +1,4 @@
+
 const helloWorld = () => {
     return new Promise((resolve, reject) => {
         (true)
@@ -11,3 +12,13 @@ const HelloAsync = async () => {
     console.log(hello);
 }
 HelloAsync();
+
+const anotherFunction = async () => {
+    try {
+        const hello = await helloWorld();
+        console.log(hello);
+    } catch (error) {
+        console.log(error)
+    }
+}
+anotherFunction();
