@@ -23,6 +23,14 @@ Promise.allSettled([promise1, promise2, promise3])
 console.log(window);
 console.log(globalThis);
 
+const fooo = null ?? 'default string';
+console.log(fooo);
 
+const user = {};
+console.log(user?.profile?.email);
 
-const fooo = null ?? 'default string'
+if(user?.profile?.email) {
+    console.log('email')
+} else {
+    console.log('fail')
+}
